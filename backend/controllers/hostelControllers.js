@@ -79,7 +79,7 @@ exports.postSignIn=async (req,res,next)=>{
 }
 
 exports.getAuthForStudent=async (req,res,next)=>{
-    console.log('session',req.session.user);
+    http://localhost:3001ssion',req.session.user);
     if(req.session && req.session.user && req.session.user.userType==='student'){
         return res.send({isAuthenticated:true,isAuthorizedAsStudent:true});
     }else{

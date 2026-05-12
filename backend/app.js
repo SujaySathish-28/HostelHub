@@ -14,6 +14,7 @@ const adminRouter = require('./routes/adminRouter');
 const studentRouter = require('./routes/studentRouter');
 const Attendance = require('./model/attendanceSchema');
 const MongoDBStore=require('connect-mongodb-session')(session);
+app.set("trust proxy", 1);
 const store=new MongoDBStore({
     uri:Mongo_URL,
     collection:'sessions',
@@ -24,7 +25,6 @@ const corsOptions = {
     credentials: true,
     optionsSuccessStatus: 200,
 };
-
 app.use(cors(corsOptions));
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'https://hostel-hub-seven.vercel.app');
@@ -40,7 +40,8 @@ app.use(session({
     saveUninitialized:false,
     store:store,
     cookie: {
-        secure: false, // true only in HTTPS
+        secure: true, // true only in HTTPS
+        sameSite: "none",
         httpOnly: true
     }
 }))
@@ -63,7 +64,7 @@ app.use(adminRouter);
 app.use(studentRouter);
 
 const PORT=3001;
-mongoose.connect(Mongo_URL).then(async () => {
+mongoose.connect(process.env.Mongo_URL).then(async () => {
     console.log('connected to mongodb');
     try {
         const indexes = await Attendance.collection.indexes();

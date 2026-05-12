@@ -1,5 +1,5 @@
 export const postAdmit=async (data)=>{
-    const res=await fetch('http://localhost:3001/admit-student',{
+    const res=await fetch('https://hostelhub-8wba.onrender.com/admit-student',{
         method:'POST',
         credentials: "include",
         headers:{
@@ -12,7 +12,7 @@ export const postAdmit=async (data)=>{
 }
 
 export const getLeaveRequests=async ()=>{
-    const res=await fetch('http://localhost:3001/leave-requests',{
+    const res=await fetch('https://hostelhub-8wba.onrender.com/leave-requests',{
         credentials:'include',
     });
     const resp=await res.json();
@@ -20,7 +20,7 @@ export const getLeaveRequests=async ()=>{
 }
 
 export const getComplaints=async ()=>{
-    const res = await fetch('http://localhost:3001/admin/admin-complaints', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/admin-complaints', {
         credentials: 'include',
     });
     const resp = await res.json();
@@ -28,7 +28,7 @@ export const getComplaints=async ()=>{
 }
 
 export const completeComplaint = async (id) => {
-    const res = await fetch(`http://localhost:3001/admin/admin-complaints/${encodeURIComponent(id)}/complete`, {
+    const res = await fetch(`https://hostelhub-8wba.onrender.com/admin/admin-complaints/${encodeURIComponent(id)}/complete`, {
         method: 'PUT',
         credentials: 'include',
         headers: {
@@ -40,7 +40,7 @@ export const completeComplaint = async (id) => {
 }
 
 export const getAttendanceRooms = async () => {
-    const res = await fetch('http://localhost:3001/admin/attendance-rooms', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/attendance-rooms', {
         credentials: 'include',
     });
     const resp = await res.json();
@@ -48,7 +48,7 @@ export const getAttendanceRooms = async () => {
 }
 
 export const saveAttendance = async (attendance) => {
-    const res = await fetch('http://localhost:3001/admin/attendance', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/attendance', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -61,14 +61,14 @@ export const saveAttendance = async (attendance) => {
 }
 
 export const getAdminProfile = async () => {
-    const res = await fetch('http://localhost:3001/admin/profile', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/profile', {
         credentials: 'include',
     });
     return await res.json();
 }
 
 export const getLeaveHistoryStudents = async () => {
-    const res = await fetch('http://localhost:3001/admin/leave-history/students', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/leave-history/students', {
         credentials: 'include',
     });
     const resp = await res.json();
@@ -76,7 +76,7 @@ export const getLeaveHistoryStudents = async () => {
 }
 
 export const getLeaveHistoryByStudent = async (studentID) => {
-    const url = new URL('http://localhost:3001/admin/leave-history');
+    const url = new URL('https://hostelhub-8wba.onrender.com/admin/leave-history');
     url.searchParams.append('studentID', studentID);
     const res = await fetch(url.toString(), {
         credentials: 'include',
@@ -86,7 +86,7 @@ export const getLeaveHistoryByStudent = async (studentID) => {
 }
 
 export const updateLeaveRequestStatus=async (status,studentID,reason,requestId)=>{
-    const url = new URL('http://localhost:3001/admin/leave-requests-status-update');
+    const url = new URL('https://hostelhub-8wba.onrender.com/admin/leave-requests-status-update');
     if (studentID) url.searchParams.append('studentID', studentID);
     if (requestId) url.searchParams.append('requestId', requestId);
     url.searchParams.append('status', status);
@@ -100,14 +100,14 @@ export const updateLeaveRequestStatus=async (status,studentID,reason,requestId)=
 }
 
 export const getNoticeBoard = async () => {
-    const res = await fetch('http://localhost:3001/admin/notices', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/notices', {
         credentials: 'include',
     });
     return await res.json();
 };
 
 export const createNotice = async (notice) => {
-    const res = await fetch('http://localhost:3001/admin/notices', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/notices', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -119,7 +119,7 @@ export const createNotice = async (notice) => {
 };
 
 export const updateNotice = async (id, notice) => {
-    const res = await fetch(`http://localhost:3001/admin/notices/${encodeURIComponent(id)}`, {
+    const res = await fetch(`https://hostelhub-8wba.onrender.com/admin/notices/${encodeURIComponent(id)}`, {
         method: 'PUT',
         credentials: 'include',
         headers: {
@@ -131,7 +131,7 @@ export const updateNotice = async (id, notice) => {
 };
 
 export const deleteNotice = async (id) => {
-    const res = await fetch(`http://localhost:3001/admin/notices/${encodeURIComponent(id)}`, {
+    const res = await fetch(`https://hostelhub-8wba.onrender.com/admin/notices/${encodeURIComponent(id)}`, {
         method: 'DELETE',
         credentials: 'include',
     });
@@ -139,7 +139,7 @@ export const deleteNotice = async (id) => {
 };
 
 export const getRulesRegulations = async (itemType) => {
-    const url = new URL('http://localhost:3001/admin/rules-regulations');
+    const url = new URL('https://hostelhub-8wba.onrender.com/admin/rules-regulations');
     if (itemType) {
         url.searchParams.append('type', itemType);
     }
@@ -150,7 +150,7 @@ export const getRulesRegulations = async (itemType) => {
 };
 
 export const createRuleRegulation = async (item) => {
-    const res = await fetch('http://localhost:3001/admin/rules-regulations', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/rules-regulations', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -162,7 +162,7 @@ export const createRuleRegulation = async (item) => {
 };
 
 export const updateRuleRegulation = async (id, item) => {
-    const res = await fetch(`http://localhost:3001/admin/rules-regulations/${encodeURIComponent(id)}`, {
+    const res = await fetch(`https://hostelhub-8wba.onrender.com/admin/rules-regulations/${encodeURIComponent(id)}`, {
         method: 'PUT',
         credentials: 'include',
         headers: {
@@ -174,7 +174,7 @@ export const updateRuleRegulation = async (id, item) => {
 };
 
 export const deleteRuleRegulation = async (id) => {
-    const res = await fetch(`http://localhost:3001/admin/rules-regulations/${encodeURIComponent(id)}`, {
+    const res = await fetch(`https://hostelhub-8wba.onrender.com/admin/rules-regulations/${encodeURIComponent(id)}`, {
         method: 'DELETE',
         credentials: 'include',
     });
@@ -182,14 +182,14 @@ export const deleteRuleRegulation = async (id) => {
 };
 
 export const getAlerts = async () => {
-    const res = await fetch('http://localhost:3001/admin/alerts', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/alerts', {
         credentials: 'include',
     });
     return await res.json();
 };
 
 export const createAlert = async (alert) => {
-    const res = await fetch('http://localhost:3001/admin/alerts', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/alerts', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -201,7 +201,7 @@ export const createAlert = async (alert) => {
 };
 
 export const updateAlert = async (id, alert) => {
-    const res = await fetch(`http://localhost:3001/admin/alerts/${encodeURIComponent(id)}`, {
+    const res = await fetch(`https://hostelhub-8wba.onrender.com/admin/alerts/${encodeURIComponent(id)}`, {
         method: 'PUT',
         credentials: 'include',
         headers: {
@@ -213,7 +213,7 @@ export const updateAlert = async (id, alert) => {
 };
 
 export const deleteAlert = async (id) => {
-    const res = await fetch(`http://localhost:3001/admin/alerts/${encodeURIComponent(id)}`, {
+    const res = await fetch(`https://hostelhub-8wba.onrender.com/admin/alerts/${encodeURIComponent(id)}`, {
         method: 'DELETE',
         credentials: 'include',
     });
@@ -221,14 +221,14 @@ export const deleteAlert = async (id) => {
 };
 
 export const getAnnouncements = async () => {
-    const res = await fetch('http://localhost:3001/admin/announcements', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/announcements', {
         credentials: 'include',
     });
     return await res.json();
 };
 
 export const createAnnouncement = async (announcement) => {
-    const res = await fetch('http://localhost:3001/admin/announcements', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/announcements', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -240,7 +240,7 @@ export const createAnnouncement = async (announcement) => {
 };
 
 export const updateAnnouncement = async (id, announcement) => {
-    const res = await fetch(`http://localhost:3001/admin/announcements/${encodeURIComponent(id)}`, {
+    const res = await fetch(`https://hostelhub-8wba.onrender.com/admin/announcements/${encodeURIComponent(id)}`, {
         method: 'PUT',
         credentials: 'include',
         headers: {
@@ -252,7 +252,7 @@ export const updateAnnouncement = async (id, announcement) => {
 };
 
 export const deleteAnnouncement = async (id) => {
-    const res = await fetch(`http://localhost:3001/admin/announcements/${encodeURIComponent(id)}`, {
+    const res = await fetch(`https://hostelhub-8wba.onrender.com/admin/announcements/${encodeURIComponent(id)}`, {
         method: 'DELETE',
         credentials: 'include',
     });
@@ -260,7 +260,7 @@ export const deleteAnnouncement = async (id) => {
 };
 
 export const updateAdminTheme = async (theme) => {
-    const res = await fetch('http://localhost:3001/admin/update-theme', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/update-theme', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -272,28 +272,28 @@ export const updateAdminTheme = async (theme) => {
 };
 
 export const getDashboardStats = async () => {
-    const res = await fetch('http://localhost:3001/admin/dashboard-stats', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/dashboard-stats', {
         credentials: 'include',
     });
     return await res.json();
 };
 
 export const getAllStudents = async () => {
-    const res = await fetch('http://localhost:3001/admin/students', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/students', {
         credentials: 'include',
     });
     return await res.json();
 };
 
 export const getAttendanceHistory = async () => {
-    const res = await fetch('http://localhost:3001/admin/attendance-history', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/attendance-history', {
         credentials: 'include',
     });
     return await res.json();
 };
 
 export const getAllAdmins = async () => {
-    const res = await fetch('http://localhost:3001/admin/admins', {
+    const res = await fetch('https://hostelhub-8wba.onrender.com/admin/admins', {
         credentials: 'include',
     });
     return await res.json();

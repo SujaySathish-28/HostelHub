@@ -17,7 +17,7 @@ const StudentMessMenu = () => {
 
   const fetchMessMenu = async () => {
     try {
-      const response = await fetch("http://localhost:3001/student/mess-menu", {
+      const response = await fetch("https://hostelhub-8wba.onrender.com/student/mess-menu", {
         credentials: "include"
       });
       const data = await response.json();

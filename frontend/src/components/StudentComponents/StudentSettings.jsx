@@ -35,7 +35,7 @@ const StudentSettings = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('http://localhost:3001/student/change-password', {
+      const response = await fetch('https://hostelhub-8wba.onrender.com/student/change-password', {
         method: 'POST',
         credentials: 'include',
         headers: {

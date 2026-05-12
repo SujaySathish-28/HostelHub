@@ -42,7 +42,7 @@ const AddAdmin = () => {
         setMessage('');
 
         try {
-            const response = await fetch('http://localhost:3001/admin/add-admin', {
+            const response = await fetch('https://hostelhub-8wba.onrender.com/admin/add-admin', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {

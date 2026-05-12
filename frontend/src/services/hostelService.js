@@ -1,5 +1,5 @@
 export const createUserAtServer=async (data)=>{
-    const res=await fetch('http://localhost:3001/sign-up',{
+    const res=await fetch('https://hostelhub-8wba.onrender.com/sign-up',{
         method:'POST',
         headers:{
             'content-type':'application/json'
@@ -11,7 +11,7 @@ export const createUserAtServer=async (data)=>{
 }
 export const signIn=async (data)=>{
     try {
-        const res=await fetch('http://localhost:3001/sign-in',{
+        const res=await fetch('https://hostelhub-8wba.onrender.com/sign-in',{
             method:'POST',
             credentials: 'include',
             headers:{
@@ -27,14 +27,14 @@ export const signIn=async (data)=>{
 }
 
 export const authenticateForStudent=async ()=>{
-    const res=await fetch('http://localhost:3001/auth-student',{
+    const res=await fetch('https://hostelhub-8wba.onrender.com/auth-student',{
         credentials:"include"
     });
     const resp=await res.json();
     return {isAuthenticated:resp.isAuthenticated,isAuthorizedAsStudent:resp.isAuthorizedAsStudent};
 }
 export const authenticateForAdmin=async ()=>{
-    const res=await fetch('http://localhost:3001/auth-admin',{
+    const res=await fetch('https://hostelhub-8wba.onrender.com/auth-admin',{
         credentials:"include"
     });
     const resp=await res.json();
@@ -42,7 +42,7 @@ export const authenticateForAdmin=async ()=>{
 }
 
 export const logout=async ()=>{
-    const res=await fetch('http://localhost:3001/logout',{
+    const res=await fetch('https://hostelhub-8wba.onrender.com/logout',{
         method:'POST',
         credentials:"include"
     });

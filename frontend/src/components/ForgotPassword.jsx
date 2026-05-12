@@ -24,7 +24,7 @@ const ForgotPassword = () => {
     const verifyToken = async (resetToken, resetEmail) => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3001/student/verify-reset-token', {
+      const response = await fetch('https://hostelhub-8wba.onrender.com/student/verify-reset-token', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ const ForgotPassword = () => {
 
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3001/student/forgot-password', {
+      const response = await fetch('https://hostelhub-8wba.onrender.com/student/forgot-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ const ForgotPassword = () => {
 
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3001/student/reset-password', {
+      const response = await fetch('https://hostelhub-8wba.onrender.com/student/reset-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

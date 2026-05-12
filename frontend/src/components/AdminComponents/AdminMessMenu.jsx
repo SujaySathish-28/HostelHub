@@ -21,7 +21,7 @@ const AdminMessMenu = () => {
 
   const fetchMessMenu = async () => {
     try {
-      const response = await fetch("http://localhost:3001/admin/mess-menu", {
+      const response = await fetch("https://hostelhub-8wba.onrender.com/admin/mess-menu", {
         credentials: "include"
       });
       const data = await response.json();
@@ -42,8 +42,8 @@ const AdminMessMenu = () => {
 
     try {
       const url = editingId
-        ? `http://localhost:3001/admin/mess-menu/${selectedDay}/${selectedMeal}/${editingId}`
-        : "http://localhost:3001/admin/mess-menu";
+        ? `https://hostelhub-8wba.onrender.com/admin/mess-menu/${selectedDay}/${selectedMeal}/${editingId}`
+        : "https://hostelhub-8wba.onrender.com/admin/mess-menu";
 
       const method = editingId ? "PUT" : "POST";
       const payload = editingId
@@ -75,7 +75,7 @@ const AdminMessMenu = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3001/admin/mess-menu/${selectedDay}/${selectedMeal}/${itemId}`,
+        `https://hostelhub-8wba.onrender.com/admin/mess-menu/${selectedDay}/${selectedMeal}/${itemId}`,
         {
           method: "DELETE",
           credentials: "include"

@@ -19,7 +19,7 @@ const AdminSettings = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
     
     try {
-      const response = await fetch('http://localhost:3001/admin/update-theme', {
+      const response = await fetch('https://hostelhub-8wba.onrender.com/admin/update-theme', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -58,7 +58,7 @@ const AdminSettings = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('http://localhost:3001/admin/change-password', {
+      const response = await fetch('https://hostelhub-8wba.onrender.com/admin/change-password', {
         method: 'POST',
         credentials: 'include',
         headers: {

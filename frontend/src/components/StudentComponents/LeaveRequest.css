@@ -1,0 +1,125 @@
+/* Leave Request Form Styles */
+.leave-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #eff4ff 0%, #f8f1ff 100%);
+}
+
+.leave-card {
+  width: 100%;
+  max-width: 760px;
+  background: var(--bg);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+}
+
+.leave-header {
+  margin-bottom: 1.75rem;
+}
+
+.leave-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--text-h);
+}
+
+.leave-header p {
+  margin: 0.75rem 0 0;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.leave-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-h);
+  font-size: 0.95rem;
+}
+
+.form-field,
+textarea.form-field {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+  color: var(--text-h);
+  background: var(--bg);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-field:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(170, 59, 255, 0.12);
+}
+
+textarea.form-field {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.submit-btn {
+  width: fit-content;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.95rem 1.8rem;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 780px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .leave-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .leave-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .leave-header p {
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}

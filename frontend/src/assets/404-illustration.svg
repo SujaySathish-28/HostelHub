@@ -1,0 +1,26 @@
+<svg width="400" height="320" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="320" rx="32" fill="url(#bg)"/>
+  <path d="M44 80H356" stroke="#BFDBFE" stroke-width="18" stroke-linecap="round"/>
+  <path d="M56 80L94 48H306L344 80" stroke="#93C5FD" stroke-width="18" stroke-linecap="round"/>
+  <path d="M324 78V248C324 268.568 308.568 284 288 284H112C91.4315 284 76 268.568 76 248V78" fill="#FFFFFF"/>
+  <path d="M76 78L104 46H296L324 78" fill="#DBEAFE"/>
+  <line x1="120" y1="132" x2="280" y2="132" stroke="#BFDBFE" stroke-width="12" stroke-linecap="round"/>
+  <line x1="120" y1="172" x2="280" y2="172" stroke="#E0E7FF" stroke-width="12" stroke-linecap="round"/>
+  <line x1="120" y1="212" x2="240" y2="212" stroke="#E0E7FF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M164 70H236" stroke="#2563EB" stroke-width="14" stroke-linecap="round"/>
+  <text x="200" y="170" text-anchor="middle" fill="#1E40AF" font-family="Inter, sans-serif" font-size="64" font-weight="700">404</text>
+  <text x="200" y="210" text-anchor="middle" fill="#374151" font-family="Inter, sans-serif" font-size="18">Page Not Found</text>
+  <path d="M152 242C152 242 172 266 200 266C228 266 248 242 248 242" stroke="#60A5FA" stroke-width="12" stroke-linecap="round"/>
+  <path d="M148 98L182 132" stroke="#F59E0B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M252 98L218 132" stroke="#F59E0B" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="68" cy="260" r="18" fill="#A5B4FC" opacity="0.6"/>
+  <circle cx="334" cy="248" r="14" fill="#60A5FA" opacity="0.6"/>
+  <circle cx="308" cy="98" r="10" fill="#F472B6" opacity="0.8"/>
+  <circle cx="72" cy="110" r="8" fill="#34D399" opacity="0.8"/>
+</svg>

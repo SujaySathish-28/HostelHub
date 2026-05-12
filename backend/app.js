@@ -20,14 +20,14 @@ const store=new MongoDBStore({
 })
 
 const corsOptions = {
-    origin: 'https://hostel-hub-seven.vercel.app/',
+    origin: 'https://hostel-hub-seven.vercel.app',
     credentials: true,
     optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://hostel-hub-seven.vercel.app/');
+    res.header('Access-Control-Allow-Origin', 'https://hostel-hub-seven.vercel.app');
     res.header('Access-Control-Allow-Credentials', 'true');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();

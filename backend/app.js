@@ -64,7 +64,7 @@ app.use(adminRouter);
 app.use(studentRouter);
 
 const PORT=3001;
-mongoose.connect(process.env.Mongo_URL).then(async () => {
+mongoose.connect(process.env.MONGO_URL).then(async () => {
     console.log('connected to mongodb');
     try {
         const indexes = await Attendance.collection.indexes();
